@@ -40,6 +40,7 @@ export const enum PetType {
     totoro = 'totoro',
     turtle = 'turtle',
     zappy = 'zappy',
+    pony = 'pony',
     null = 'null',
 }
 
@@ -57,6 +58,7 @@ export const enum PetSize {
     small = 'small',
     medium = 'medium',
     large = 'large',
+    extraLarge = 'extra-large',
 }
 
 export const enum ExtPosition {
@@ -106,6 +108,7 @@ export const ALL_PETS = [
     PetType.totoro,
     PetType.turtle,
     PetType.zappy,
+    PetType.pony,
 ];
 export const ALL_COLORS = [
     PetColor.black,
@@ -134,5 +137,6 @@ export const ALL_SCALES = [
     PetSize.small,
     PetSize.medium,
     PetSize.large,
+    PetSize.extraLarge,
 ];
 export const ALL_THEMES = [Theme.none, Theme.forest, Theme.castle, Theme.beach];

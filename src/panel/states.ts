@@ -78,6 +78,8 @@ export const enum States {
     chaseFriend = 'chase-friend',
     standRight = 'stand-right',
     standLeft = 'stand-left',
+    like = 'like',
+    work = 'work',
 }
 
 export enum FrameResult {
@@ -144,6 +146,10 @@ export function resolveState(state: string, pet: IPetType): IState {
             return new StandRightState(pet);
         case States.standLeft:
             return new StandLeftState(pet);
+        case States.work:
+            return new WorkState(pet);
+        case States.like:
+            return new LikeState(pet);
     }
     return new SitIdleState(pet);
 }
@@ -182,6 +188,20 @@ class AbstractStaticState implements IState {
 export class SitIdleState extends AbstractStaticState {
     label = States.sitIdle;
     spriteLabel = 'idle';
+    horizontalDirection = HorizontalDirection.right;
+    holdTime = 50;
+}
+
+export class WorkState extends AbstractStaticState {
+    label = States.work;
+    spriteLabel = 'work';
+    horizontalDirection = HorizontalDirection.right;
+    holdTime = 50;
+}
+
+export class LikeState extends AbstractStaticState {
+    label = States.like;
+    spriteLabel = 'like';
     horizontalDirection = HorizontalDirection.right;
     holdTime = 50;
 }

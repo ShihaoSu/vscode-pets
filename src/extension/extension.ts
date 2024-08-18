@@ -180,11 +180,11 @@ export async function storeCollectionAsMemento(
     await context.globalState.update(EXTRA_PETS_KEY_TYPES, contextTypes);
     await context.globalState.update(EXTRA_PETS_KEY_COLORS, contextColors);
     await context.globalState.update(EXTRA_PETS_KEY_NAMES, contextNames);
-    context.globalState.setKeysForSync([
-        EXTRA_PETS_KEY_TYPES,
-        EXTRA_PETS_KEY_COLORS,
-        EXTRA_PETS_KEY_NAMES,
-    ]);
+    // context.globalState.setKeysForSync([
+    //     EXTRA_PETS_KEY_TYPES,
+    //     EXTRA_PETS_KEY_COLORS,
+    //     EXTRA_PETS_KEY_NAMES,
+    // ]);
 }
 
 let spawnPetStatusBar: vscode.StatusBarItem;
