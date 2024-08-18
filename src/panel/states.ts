@@ -196,14 +196,14 @@ export class WorkState extends AbstractStaticState {
     label = States.work;
     spriteLabel = 'work';
     horizontalDirection = HorizontalDirection.right;
-    holdTime = 50;
+    holdTime = 500;
 }
 
 export class LikeState extends AbstractStaticState {
     label = States.like;
     spriteLabel = 'like';
     horizontalDirection = HorizontalDirection.right;
-    holdTime = 50;
+    holdTime = 200;
 }
 
 export class LieState extends AbstractStaticState {

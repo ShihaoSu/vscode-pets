@@ -35,15 +35,15 @@ export class Pony extends BasePetType {
             },
             {
                 state: States.work,
-                possibleNextStates: [States.sitIdle],
+                possibleNextStates: [
+                    States.sitIdle, 
+                    States.like],
             },
             {
                 state: States.like,
                 possibleNextStates: [
                     States.sitIdle,
-                    States.work,
-                    States.walkRight,
-                    States.runRight
+                    States.work
                 ],
             },
         ],
